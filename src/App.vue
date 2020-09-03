@@ -68,7 +68,7 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: black;
+  color: #2a6259;
 }
 
 .md-raised {
