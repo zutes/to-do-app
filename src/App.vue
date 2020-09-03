@@ -5,7 +5,11 @@
     </md-card-header>
     <md-card>
       <md-field>
-        <md-input v-model="currentTodo" @keydown.enter="addTodo()" placeholder=" Add a to-do here" />
+        <md-input
+          v-model="currentTodo"
+          @keydown.enter="addTodo()"
+          placeholder=" Add a to-do here"
+        />
       </md-field>
       <ul class="todos">
         <li v-for="todo in todos" :key="todo.id">
@@ -15,10 +19,17 @@
               class="editing"
               :class="{ editing: todo == editedTodo }"
               @dblclick="editTodo(todo)"
-            >{{ todo.label }}</span>
+              >{{ todo.label }}</span
+            >
           </md-input>
-          <input type="checkbox" @change="completeTodo(todo)" :checked="todo.isComplete" />
-          <md-button class="md-raised" @click="removeTodo(todo)">Delete To-Do</md-button>
+          <input
+            type="checkbox"
+            @change="completeTodo(todo)"
+            :checked="todo.isComplete"
+          />
+          <md-button class="md-raised" @click="removeTodo(todo)"
+            >Delete To-Do</md-button
+          >
         </li>
       </ul>
     </md-card>
@@ -30,8 +41,8 @@ export default {
   data() {
     return {
       todos: [],
-      currentTodo: "",
-      completed: "",
+      currentTodo: '',
+      completed: '',
     };
   },
   methods: {
@@ -42,7 +53,7 @@ export default {
         completed: false,
         editing: false,
       });
-      this.currentTodo = "";
+      this.currentTodo = '';
     },
     completeTodo(todo) {
       todo.isComplete = !todo.isComplete;
@@ -61,7 +72,7 @@ export default {
 
 <style>
 body {
-  background-color: #d3d3d3;
+  background-color: #489c79;
 }
 .title {
   font-size: 42px;
